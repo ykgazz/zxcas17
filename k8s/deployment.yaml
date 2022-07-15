@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shusis
+  name: oskiu
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: shusis
+      app: oskiu
   template:
     metadata:
       labels:
-        app: shusis
+        app: oskiu
     spec:
       containers:
-      - image: okteto.dev/shusis:latest
-        name: shusis
+      - image: okteto.dev/oskiu:latest
+        name: oskiu
         ports:
         - containerPort: 8080
         env:
@@ -25,10 +25,10 @@ spec:
         - name: Vless_UUID
           value: "b8e1488a-7e00-42dd-ab05-7e6b23f5e140"
         - name: Vless_Path
-          value: "/vl171717"
+          value: "/vl181818"
         - name: Vmess_UUID
           value: "b8e1488a-7e00-42dd-ab05-7e6b23f5e140"
         - name: Vmess_Path
-          value: "/vm171717"
+          value: "/vm181818"
         - name: Share_Path
           value: "/v2link"
